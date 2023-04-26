@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parallel testing of classes">
+	<listeners>
+		<listener class-name="com.qalegentbilling.TestListener" />
+	</listeners>
+	<test thread-count="5" name="Chrome parallel Testing-classes" parallel="classes">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qalegentbilling.testscripts.LoginTest">
+				<methods>
+					<include name="TC001_verifyLoginPageTitle()" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Edge parallel Testing-classes" parallel="classes">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="com.qalegentbilling.LoginTest">
+				<methods>
+					<include name="TC004_verifyRemembermeCheckBoxClick()" />
+				</methods>
+			</class>
+		</classes>
+	</test><!-- Test -->
+</suite><!-- suite -->
