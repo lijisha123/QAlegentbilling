@@ -20,7 +20,7 @@ public class HomePage extends TestHelperUtility {
 	private final String _endtourButton="//button[@class='btn btn-default btn-sm']";
 	@FindBy(xpath =_endtourButton)
 	private WebElement endtourButton;
-	private final String _profileButton="//span[text()='efg pqr']";
+	private final String _profileButton="//a[@class='dropdown-toggle']//span";
 	@FindBy(xpath =_profileButton)
 	private WebElement profileButton;
 	private final String _signoutButton="//a[text()='Sign Out']";
@@ -38,9 +38,9 @@ public class HomePage extends TestHelperUtility {
 	private final String _salescommission="/html/body/div[2]/aside/section/ul/li[2]/ul/li[3]/a";
 	@FindBy(xpath =_salescommission)
 	private WebElement salescommission;
-	
-	
-	
+	private final String _newuser="//a[@class='dropdown-toggle']//span";
+	@FindBy(xpath =_newuser)
+	private WebElement newuser;
 	public void popupwindowhandle()
 {
 	endtourButton.click();
@@ -88,4 +88,13 @@ public class HomePage extends TestHelperUtility {
 		return new UserPage(driver);
 		
 	}
+	public void newusername(String newuname) {
+		page.enterText(newuser,newuname);
+	}
+	public RolesPage clickonrolesbutton() {
+		page.clickOnElement(rolesButton);
+		return  new RolesPage(driver);
+	}
+	
+	
 }

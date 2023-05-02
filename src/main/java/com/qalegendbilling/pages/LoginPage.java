@@ -70,6 +70,10 @@ public class LoginPage extends TestHelperUtility{
 		page.clickOnElement(forgotPassword);
 		return new ResetPasswordPage(driver);
 		}
+	public void enternewusername(String newuname) {
+		page.enterText(username,newuname);
+		}
+	
 }
 
 	

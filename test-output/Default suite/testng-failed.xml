@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qalegentbilling.testscripts.Home">
+      <class name="com.qalegentbilling.testscripts.AddRolesTest">
         <methods>
           <include name="setExtent"/>
+          <include name="TC021_verifyRolespagetitle"/>
           <include name="tearDown"/>
-          <include name="TC009_verifyuserManagementbutton"/>
           <include name="setUP"/>
         </methods>
-      </class> <!-- com.qalegentbilling.testscripts.Home -->
+      </class> <!-- com.qalegentbilling.testscripts.AddRolesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -53,8 +53,8 @@ public class Base {
         driver = DriverFactory.testInitialization(browser);
         driver.get(url);
     }
-    
     */
+    
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) throws IOException {
         if(result.getStatus()== ITestResult.FAILURE){
@@ -62,7 +62,7 @@ public class Base {
             File screenshot=takeScreenshot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(screenshot, new File("./Screenshots/"+result.getName()+".png"));
         }
-       // driver.quit();
+        driver.quit();
     }
     @BeforeSuite
     public void setExtent(final ITestContext testContext){
