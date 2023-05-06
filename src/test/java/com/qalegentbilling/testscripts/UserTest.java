@@ -55,10 +55,10 @@ public class UserTest extends Base{
 		home.clickusermanagementbutton();
 		home.clickuserbutton();
 		user.searchuser(searchemail);
-		//user.getTableContent(email);
+		user.getTableContent(searchemail);
 		user.pressenter();
 		}
-	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
+	@Test(priority = 1, enabled = true, description = "TC001 verify user search with invalid data")
 	public void TC012_verifyUserSearchWithInValidData() throws AWTException, InterruptedException{
 		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("LoginPage");
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("UserPage");

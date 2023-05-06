@@ -14,7 +14,7 @@ import com.qalegendbilling.pages.ViewUserPage;
 import com.qalegendbilling.utilities.ExcelUtility;
 import com.qalegendbilling.utilities.RandomUtility;
 import com.qalegentbilling.automationcore.Base;
-import com.qalegentbilling.automationcore.GeneralTest;
+import com.qalegentbilling.common.GeneralTest;
 
 public class ViewUserTest extends Base{
 	HomePage home;
@@ -24,7 +24,7 @@ public class ViewUserTest extends Base{
 	EditUserPage edit;
 	ViewUserPage view;
 	
-@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
+@Test(priority = 1, enabled = true, description = "TC001 verify view details")
 	public void TC020_verifyviewDetails() throws InterruptedException{
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("UserPage");
 		String searchemail=data.get(1).get(1);
@@ -44,13 +44,5 @@ public class ViewUserTest extends Base{
 		user.clickviewbutton();
 		view.userdetailsdisplay();
 		}
-@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
-public void TC020_verifyRolespageTitle() throws InterruptedException{
-	List<ArrayList<String>> data=ExcelUtility.excelDataReader("ViewUserPage");
-	String expTitle=data.get(1).get(1);
-	GeneralTest general=new GeneralTest(driver);
-	general.generaltestcode();
-	home.clickusermanagementbutton();
-	
-}
+
 }

@@ -1,71 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="9" total="11" passed="2" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-02T10:00:33 GST" name="grouping testing Suite" finished-at="2023-05-02T10:01:00 GST" duration-ms="26860">
+  <suite started-at="2023-05-05T22:57:58 GST" name="Default suite" finished-at="2023-05-05T22:58:18 GST" duration-ms="19973">
     <groups>
       <group name="smoke">
-        <method signature="HomeTest.TC006_verifyHomePageTitle()[pri:1, instance:com.qalegentbilling.testscripts.HomeTest@4c012563]" name="TC006_verifyHomePageTitle" class="com.qalegentbilling.testscripts.HomeTest"/>
-        <method signature="LoginTest.TC001_verifyLoginPageTitle()[pri:1, instance:com.qalegentbilling.testscripts.LoginTest@44a59da3]" name="TC001_verifyLoginPageTitle" class="com.qalegentbilling.testscripts.LoginTest"/>
+        <method signature="AddTest.TC013_verifyerrorMsginAdduser()[pri:1, instance:com.qalegentbilling.testscripts.AddTest@6a57ae10]" name="TC013_verifyerrorMsginAdduser" class="com.qalegentbilling.testscripts.AddTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-05-02T10:00:33 GST" name="parameter testing grouping" finished-at="2023-05-02T10:01:00 GST" duration-ms="26860">
-      <class name="com.qalegentbilling.testscripts.HomeTest">
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegentbilling.testscripts.HomeTest@4c012563]" started-at="2023-05-02T10:00:33 GST" name="setUP" finished-at="2023-05-02T10:00:43 GST" duration-ms="9914" status="PASS">
+    <test started-at="2023-05-05T22:57:58 GST" name="Default test" finished-at="2023-05-05T22:58:18 GST" duration-ms="19973">
+      <class name="com.qalegentbilling.testscripts.AddTest">
+        <test-method is-config="true" signature="setExtent(org.testng.ITestContext)[pri:0, instance:com.qalegentbilling.testscripts.AddTest@6a57ae10]" started-at="2023-05-05T22:57:58 GST" name="setExtent" finished-at="2023-05-05T22:57:58 GST" duration-ms="11" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[org.testng.TestRunner@1c067c0d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC006_verifyHomePageTitle()[pri:1, instance:com.qalegentbilling.testscripts.HomeTest@4c012563]" started-at="2023-05-02T10:00:43 GST" name="TC006_verifyHomePageTitle" description="TC001 verify Home Page Title" finished-at="2023-05-02T10:00:47 GST" duration-ms="4822" status="PASS">
+        </test-method> <!-- setExtent -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:com.qalegentbilling.testscripts.AddTest@6a57ae10]" started-at="2023-05-05T22:57:58 GST" name="setUP" finished-at="2023-05-05T22:58:10 GST" duration-ms="12153" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC006_verifyHomePageTitle -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegentbilling.testscripts.HomeTest@4c012563]" started-at="2023-05-02T10:00:48 GST" name="tearDown" finished-at="2023-05-02T10:00:48 GST" duration-ms="144" status="PASS">
+        </test-method> <!-- setUP -->
+        <test-method signature="TC013_verifyerrorMsginAdduser()[pri:1, instance:com.qalegentbilling.testscripts.AddTest@6a57ae10]" started-at="2023-05-05T22:58:10 GST" name="TC013_verifyerrorMsginAdduser" description="TC013 verify error Msg in Add user" finished-at="2023-05-05T22:58:18 GST" duration-ms="7666" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC013_verifyerrorMsginAdduser -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegentbilling.testscripts.AddTest@6a57ae10]" started-at="2023-05-05T22:58:18 GST" name="tearDown" finished-at="2023-05-05T22:58:18 GST" duration-ms="133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC006_verifyHomePageTitle status=SUCCESS method=HomeTest.TC006_verifyHomePageTitle()[pri:1, instance:com.qalegentbilling.testscripts.HomeTest@4c012563] output={null}]]]>
+                <![CDATA[[TestResult name=TC013_verifyerrorMsginAdduser status=SUCCESS method=AddTest.TC013_verifyerrorMsginAdduser()[pri:1, instance:com.qalegentbilling.testscripts.AddTest@6a57ae10] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegentbilling.testscripts.HomeTest -->
-      <class name="com.qalegentbilling.testscripts.LoginTest">
-        <test-method is-config="true" signature="setUP(java.lang.String)[pri:0, instance:com.qalegentbilling.testscripts.LoginTest@44a59da3]" started-at="2023-05-02T10:00:48 GST" name="setUP" finished-at="2023-05-02T10:00:59 GST" duration-ms="11703" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUP -->
-        <test-method signature="TC001_verifyLoginPageTitle()[pri:1, instance:com.qalegentbilling.testscripts.LoginTest@44a59da3]" started-at="2023-05-02T10:00:59 GST" name="TC001_verifyLoginPageTitle" description="TC001 verify Login Page Title" finished-at="2023-05-02T10:00:59 GST" duration-ms="91" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC001_verifyLoginPageTitle -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qalegentbilling.testscripts.LoginTest@44a59da3]" started-at="2023-05-02T10:00:59 GST" name="tearDown" finished-at="2023-05-02T10:01:00 GST" duration-ms="137" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC001_verifyLoginPageTitle status=SUCCESS method=LoginTest.TC001_verifyLoginPageTitle()[pri:1, instance:com.qalegentbilling.testscripts.LoginTest@44a59da3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qalegentbilling.testscripts.LoginTest -->
-    </test> <!-- parameter testing grouping -->
-  </suite> <!-- grouping testing Suite -->
+      </class> <!-- com.qalegentbilling.testscripts.AddTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

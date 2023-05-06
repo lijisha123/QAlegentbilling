@@ -15,7 +15,7 @@ import com.qalegendbilling.pages.UserPage;
 import com.qalegendbilling.utilities.ExcelUtility;
 import com.qalegendbilling.utilities.RandomUtility;
 import com.qalegentbilling.automationcore.Base;
-import com.qalegentbilling.automationcore.GeneralTest;
+import com.qalegentbilling.common.GeneralTest;
 
 public class EditUserTest extends Base{
 	HomePage home;

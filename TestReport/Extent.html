@@ -28,7 +28,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -40,7 +41,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a>
-				<span class='suite-start-time'>2 May 2023, 10:00:32 AM</span>
+				<span class='suite-start-time'>5 May 2023, 7:40:17 PM</span>
 			</a>
 			<a>
 				<span>v3.0.0</span>
@@ -78,6 +79,7 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>smoke</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -124,17 +126,97 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>TC006_verifyHomePageTitle</span>
-						<span class='test-time'>2 May 2023, 10:00:43 AM</span>
+						<span class='test-name'>TC001_verifyLoginPageTitle</span>
+						<span class='test-time'>5 May 2023, 7:40:53 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>2 May 2023, 10:00:43 AM</span>
-	<span class='label end-time'>2 May 2023, 10:01:00 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+901ms</span>
+	<span class='label start-time'>5 May 2023, 7:40:53 PM</span>
+	<span class='label end-time'>5 May 2023, 7:41:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 57s+205ms</span>
+</div>
+	<div class='test-desc'>TC001 verify Login Page Title </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>smoke</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:40:55 PM</td>
+					<td class='step-details'>Error: Invalid Title found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:40:55 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>TC002_verifyUserLoginWithValidCredentials</span>
+						<span class='test-time'>5 May 2023, 7:41:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>5 May 2023, 7:41:20 PM</span>
+	<span class='label end-time'>5 May 2023, 7:41:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+491ms</span>
+</div>
+	<div class='test-desc'>TC001 verify User Login With Valid Credentials </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:41:27 PM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>TC006_verifyHomePageTitle</span>
+						<span class='test-time'>5 May 2023, 7:41:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>5 May 2023, 7:41:47 PM</span>
+	<span class='label end-time'>5 May 2023, 7:41:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+729ms</span>
 </div>
 	<div class='test-desc'>TC001 verify Home Page Title </div>
 	<div class='test-steps'>
@@ -149,42 +231,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:00:47 AM</td>
-					<td class='step-details'>Test passed</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
-					<div class='test-heading'>
-						<span class='test-name'>TC001_verifyLoginPageTitle</span>
-						<span class='test-time'>2 May 2023, 10:00:59 AM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>2 May 2023, 10:00:59 AM</span>
-	<span class='label end-time'>2 May 2023, 10:01:00 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+228ms</span>
-</div>
-	<div class='test-desc'>TC001 verify Login Page Title </div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:00:59 AM</td>
+					<td class='timestamp'>7:41:51 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -225,7 +272,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>2</span> test(s) passed</span>
+					<span><span class='strong'>3</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
@@ -240,7 +287,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>2</span> step(s) passed</span>
+					<span><span class='strong'>4</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
@@ -251,7 +298,77 @@
 	</div>
 </div>
 </div>
-<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h5>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>smoke</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>5 May 2023, 7:40:53 PM</td>
+										<td class='linked' test-id='2'>TC001_verifyLoginPageTitle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -259,31 +376,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>2 May 2023, 10:00:32 AM</div>
+					<div class='panel-lead'>5 May 2023, 7:40:17 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>2 May 2023, 10:01:00 AM</div>
+			 		<div class='panel-lead'>5 May 2023, 7:41:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>27,138ms</div>
+					<div class='panel-lead'>93,231ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -314,6 +431,26 @@
 					</table>
 				</div>
 			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>smoke</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -323,7 +460,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 2,
+				passParent: 3,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -331,7 +468,7 @@
 				skipParent: 0,
 				unknownParent: 0,
 				
-				passChild: 2,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,

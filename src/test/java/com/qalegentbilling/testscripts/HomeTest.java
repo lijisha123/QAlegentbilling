@@ -6,69 +6,62 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qalegendbilling.constants.ErrorMessages;
+import com.qalegendbilling.constants.ExtendLogMessages;
 import com.qalegendbilling.pages.HomePage;
 import com.qalegendbilling.pages.LoginPage;
 import com.qalegendbilling.utilities.ExcelUtility;
 import com.qalegentbilling.automationcore.Base;
+import com.qalegentbilling.common.GeneralTest;
+import com.qalegentbilling.listeners.TestListener;
 
 public class HomeTest extends Base{
 	HomePage home;
 	LoginPage login;
+	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
 	@Test(priority = 1, enabled = true, description = "TC001 verify Home Page Title", groups = { "smoke" })
 	public void TC006_verifyHomePageTitle() {
+		extentTest.get().assignCategory("smoke");
 		List<ArrayList<String>> data = ExcelUtility.excelDataReader("HomePage");
-		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("LoginPage");
 		String expectedTitle = data.get(1).get(0);
-		String username=data1.get(1).get(1);
-		String password=data1.get(1).get(2);
-		home=new HomePage(driver);
-		login=new LoginPage(driver);
-		login.enterusername(username);
-		login.enterpassword(password);
-		login.clickLoginButton();
-		home.popupwindowhandle();
+		GeneralTest general=new GeneralTest(driver);
+		general.generaltestcode(); 
 		String actualHomePagetitle = home.gethomepagetitle();
+		extentTest.get().log(Status.PASS, ExtendLogMessages.HOMEPAGE_TITLE_RECEIVED);
 		Assert.assertEquals(expectedTitle, actualHomePagetitle, ErrorMessages.TITLE_FAILURE_MESSAGE);
 }
 	@Test(priority = 1, enabled = true, description = "TC001 verify signout button", groups = { "regression" })
 	public void TC008_verifysignoutbutton() {
-		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
-		String username=data.get(1).get(1);
-		String password=data.get(1).get(2);
-		home=new HomePage(driver);
-		login=new LoginPage(driver);
-		login.enterusername(username);
-		login.enterpassword(password);
-		login.clickLoginButton();
-		home.popupwindowhandle();
+		extentTest.get().assignCategory("regression");
+		GeneralTest general=new GeneralTest(driver);
+		general.generaltestcode(); 
 		home.clickprofilebutton();
 		home.clicksignoutbutton();
+		extentTest.get().log(Status.PASS, ExtendLogMessages.SIGNOUT_FAILED);
 		}
 	@Test(priority = 1, enabled = true, description = "TC001 verify user management button", groups = { "sanity" })
 	public void TC009_verifyuserManagementbutton() {
-		List<ArrayList<String>> data=ExcelUtility.excelDataReader("LoginPage");
-		//List<ArrayList<String>>data1=ExcelUtility.excelDataReader("HomePage");
-		String username=data.get(1).get(1);
-		String password=data.get(1).get(2);
-		//String user=data1.get(0).get(1);
-		//String roles=data1.get(1).get(1);
-		//String sales=data1.get(2).get(1);
+		extentTest.get().assignCategory("sanity");
+		GeneralTest general=new GeneralTest(driver);
+		general.generaltestcode();
 		home=new HomePage(driver);
-		login=new LoginPage(driver);
-		login.enterusername(username);
-		login.enterpassword(password);
-		login.clickLoginButton();
-		home.popupwindowhandle();
 		home.clickusermanagementbutton();
-		//boolean status=home.displayuserbutton();
-		//boolean status1=home.displayrolesbutton();
-		//boolean status2=home.displaysalesmanagementbutton();
 		home.displayuserbutton();
 		home.displayrolesbutton();
 		home.displaysalesmanagementbutton();
+		extentTest.get().log(Status.PASS, ExtendLogMessages.USER_MAMAGEMENT);
+}}
+		//List<ArrayList<String>>data1=ExcelUtility.excelDataReader("HomePage");
+		//String user=data1.get(0).get(1);
+		//String roles=data1.get(1).get(1);
+		//String sales=data1.get(2).get(1);
+		
+		//boolean status=home.displayuserbutton();
+		//boolean status1=home.displayrolesbutton();
+		//boolean status2=home.displaysalesmanagementbutton();
+		
 		//Assert.assertTrue(status, ErrorMessages.SUBMENU_FAILURE_MESSAGE);
 		//Assert.assertTrue(status1, ErrorMessages.SUBMENU_FAILURE_MESSAGE);
 		//Assert.assertTrue(status2, ErrorMessages.SUBMENU_FAILURE_MESSAGE);
-}
-}

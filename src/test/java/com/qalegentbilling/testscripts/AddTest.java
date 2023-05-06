@@ -7,7 +7,10 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.qalegendbilling.constants.ErrorMessages;
+import com.qalegendbilling.constants.ExtendLogMessages;
 import com.qalegendbilling.pages.AddUserPage;
 import com.qalegendbilling.pages.HomePage;
 import com.qalegendbilling.pages.LoginPage;
@@ -15,39 +18,37 @@ import com.qalegendbilling.pages.UserPage;
 import com.qalegendbilling.utilities.ExcelUtility;
 import com.qalegendbilling.utilities.RandomUtility;
 import com.qalegentbilling.automationcore.Base;
-import com.qalegentbilling.automationcore.GeneralTest;
+import com.qalegentbilling.common.GeneralTest;
+import com.qalegentbilling.listeners.TestListener;
 
 public class AddTest extends Base{
 	HomePage home;
 	LoginPage login;
 	UserPage user;
 	AddUserPage adduser;
-	
-	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
+	ThreadLocal<ExtentTest> extentTest = TestListener.getTestInstance();
+	@Test(priority = 1, enabled = true, description = "TC013 verify error Msg in Add user", groups = { "smoke" })
 	public void TC013_verifyerrorMsginAdduser(){
-		List<ArrayList<String>> data1=ExcelUtility.excelDataReader("LoginPage");
+		extentTest.get().assignCategory("smoke");
+		GeneralTest general=new GeneralTest(driver);
+		general.generaltestcode(); 
 		List<ArrayList<String>> data=ExcelUtility.excelDataReader("AddUserPage");
-		String username=data1.get(1).get(1);
-		String password=data1.get(1).get(2);
 		String experrMessage=data.get(1).get(0);
-		login=new LoginPage(driver);
 		home=new HomePage(driver);
 		user=new UserPage(driver);
 		adduser=new AddUserPage(driver);
-		login.enterusername(username);
-		login.enterpassword(password);
-		login.clickLoginButton();
-		home.popupwindowhandle();
 		home.clickusermanagementbutton();
 		home.clickuserbutton();
 		user.clickadduserbutton();
 		adduser.scrolldown();
 		adduser.clicksavebutton();
 		String actErrMsg=adduser.validation(experrMessage);
+		extentTest.get().log(Status.PASS, ExtendLogMessages.ADDUSER_ERRORMSG);
 		Assert.assertEquals(actErrMsg,experrMessage,ErrorMessages.USER_FAILURE_MESSAGE);
 		}
-	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
+	@Test(priority = 1, enabled = true, description = "TC014 verify New user login", groups = { "smoke" })
 	public void TC014_verifyNewuserlogin() throws InterruptedException{
+		extentTest.get().assignCategory("smoke");
 		List<ArrayList<String>>data=ExcelUtility.excelDataReader("AddUserPage");
 		String sname=data.get(1).get(1);
 		String fname=data.get(1).get(2);
@@ -77,8 +78,10 @@ public class AddTest extends Base{
 		login.enterpassword(password1);
 		login.clickLoginButton();
 		home.popupwindowhandle();
+		extentTest.get().log(Status.PASS, ExtendLogMessages.LOGIN_SUCCESSFUL);
+
 		}
-	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
+	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data", groups = { "smoke" })
 	public void TC015_verifyAdduserpageTitle(){
 		List<ArrayList<String>>data=ExcelUtility.excelDataReader("AddUserPage");
 		String expTitle=data.get(1).get(7);
@@ -94,7 +97,7 @@ public class AddTest extends Base{
 		String actTitle=user.addUserpageTitle();
 		Assert.assertEquals(actTitle,expTitle,ErrorMessages.TITLE_FAILURE_MESSAGE);
 	}
-	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data")
+	@Test(priority = 1, enabled = true, description = "TC001 verify user search with valid data", groups = { "smoke" })
 	public void TC016_verifyNewuserlogin(){
 		List<ArrayList<String>>data=ExcelUtility.excelDataReader("AddUserPage");
 		String sname=data.get(1).get(1);

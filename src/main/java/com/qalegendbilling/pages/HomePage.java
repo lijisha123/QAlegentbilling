@@ -32,7 +32,7 @@ public class HomePage extends TestHelperUtility {
 	private final String _userButton="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a";
 	@FindBy(xpath =_userButton)
 	private WebElement userButton;
-	private final String _rolesButton="/html/body/div[2]/aside/section/ul/li[2]/ul/li[2]/a";
+	private final String _rolesButton="//i[@class='fa fa-briefcase']//following-sibling::span";
 	@FindBy(xpath =_rolesButton)
 	private WebElement rolesButton;
 	private final String _salescommission="/html/body/div[2]/aside/section/ul/li[2]/ul/li[3]/a";

@@ -1,4 +1,4 @@
-package com.qalegentbilling.automationcore;
+package com.qalegentbilling.common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,9 @@ import com.qalegendbilling.pages.LoginPage;
 import com.qalegendbilling.pages.UserPage;
 import com.qalegendbilling.utilities.ExcelUtility;
 import com.qalegendbilling.utilities.TestHelperUtility;
+import com.qalegentbilling.automationcore.Base;
 
-public class GeneralTest extends TestHelperUtility{
+public class GeneralTest extends Base{
 	WebDriver driver;
 	public GeneralTest(WebDriver driver) {
 		this.driver = driver;
@@ -26,7 +27,6 @@ public class GeneralTest extends TestHelperUtility{
 	public void generaltestcode()
 	{
 	List<ArrayList<String>> data1=ExcelUtility.excelDataReader("LoginPage");
-	List<ArrayList<String>> data=ExcelUtility.excelDataReader("AddUserPage");
 	String username=data1.get(1).get(1);
 	String password=data1.get(1).get(2);
 	login=new LoginPage(driver);

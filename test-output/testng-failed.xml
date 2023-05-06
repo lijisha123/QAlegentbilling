@@ -6,8 +6,8 @@
       <class name="com.qalegentbilling.testscripts.AddRolesTest">
         <methods>
           <include name="setExtent"/>
-          <include name="TC021_verifyRolespagetitle"/>
           <include name="tearDown"/>
+          <include name="TC021_verifyAddRolespagetitle"/>
           <include name="setUP"/>
         </methods>
       </class> <!-- com.qalegentbilling.testscripts.AddRolesTest -->

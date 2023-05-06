@@ -1,53 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-
-<suite name="parallel testing of classes">
-
+<suite name="Cross Browser testing Suite">
 	<listeners>
-
 		<listener class-name="com.qalegentbilling.listeners.TestListener" />
-
 	</listeners>
-
-	<test thread-count="5" name="chrome-parallel testing-classes" parallel="classes">
-
+	<test thread-count="5" name="Chrome Test" parallel="classes">
 		<parameter name="browser" value="chrome" />
-
 		<classes>
-
-			<class name="com.qalegentbilling.testscript.LoginTest">
-
+			<class name="com.qalegentbilling.testscripts.LoginTest">
 				<methods>
-
 					<include name="TC001_verifyLoginPageTitle" />
-
+					<include name="TC002_verifyUserLoginWithValidCredentials" />
 				</methods>
-
 			</class>
-
 		</classes>
-
 	</test> <!-- Test -->
-
-	<test thread-count="5" name="edge-parallel testing-classes" parallel="classes">
-
-		<parameter name="browser" value="edge"/>
-
+	<test thread-count="5" name="Chrome Test2" parallel="classes">
+		<parameter name="browser" value="chrome" />
 		<classes>
-
-			<class name="com.qalegentbilling.testscript.HomeTest">
-
+			<class name="com.qalegentbilling.testscripts.HomeTest">
 				<methods>
-
-					<include name="TC006_verifyHomePageTitle()" />
-
+					<include name="TC006_verifyHomePageTitle" />
 				</methods>
-
 			</class>
-
 		</classes>
-
 	</test> <!-- Test -->
-
-</suite> <!-- Suite -->
+</suite><!-- suite -->

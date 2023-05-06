@@ -79,17 +79,20 @@ public class UserPage extends TestHelperUtility {
 		return errMsg;
 		}
 	public void getTableContent(String email) {
-        wait.setHardWait();
-        wait.waitForElementToBeVisible(driver, _rowElements, WaitUtility.LocatorType.Xpath);
-		List<ArrayList<String>> actGridData=table.get_Dynamic_TwoDimension_TablElemnts(rowElements,columnElements);
-for (int i = 0; i < actGridData.size(); i++) {
-            if (actGridData.get(i).get(0).equals(email)) {
-                for (int j = 1; j < actGridData.get(i).size(); j++) {
-                    System.out.println(actGridData.get(i).get(j));
-                }
-            }
-        }
-}
+	        wait.setHardWait();
+	        wait.waitForElementToBeVisible(driver, _rowElements, WaitUtility.LocatorType.Xpath);
+	        List<ArrayList<String>> actGridData=table.get_Dynamic_TwoDimension_TablElemnts(rowElements,columnElements);
+	for (int i = 0; i < actGridData.size(); i++) {
+		System.out.println(actGridData.size());
+	            if (actGridData.get(i).get(0).equals(email)) {
+	                for (int j = 1; j < actGridData.get(i).size(); j++) {
+	                    System.out.println(actGridData.get(i).get(j));
+	                }
+	            }
+	        }
+
+	    }
+
 	public AddUserPage clickadduserbutton() {
 		page.clickOnElement(addUserbutton);
 		return new AddUserPage(driver);
